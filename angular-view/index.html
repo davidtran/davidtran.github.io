@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app='ComplexViewApp' ng-controller='MainCtrl'>
+<head>
+    <title>Flexble route</title>
+    <script src='js/lib/jquery/jquery-1.8.3.min.js' type="text/javascript"></script>
+    <script src='js/lib/angularjs/angular.js' type='text/javascript'></script>
+    <script src='js/lib/angularjs/angular-route.js' type='text/javascript'></script>
+    <script src='js/lib/lodash/lodash.min.js' type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/app/app.js"></script>
+    <script type="text/javascript" src="js/app/controllers/MainCtrl.js"></script>
+    <script type="text/javascript" src="js/app/controllers/HomeCtrl.js"></script>
+    <script type="text/javascript" src="js/app/controllers/CategoryCtrl.js"></script>
+    <script type="text/javascript" src="js/app/controllers/ContactCtrl.js"></script>
+    <script type="text/javascript" src="js/app/controllers/CategoryListCtrl.js"></script>
+    <script type="text/javascript" src="js/app/controllers/ProductDetailCtrl.js"></script>
+    <script type="text/javascript" src="js/app/services/RequestContext.js"></script>
+</head>
+<body>
+    <a href='#/home'>Home</a>
+    <a href='#/category'>Category</a>
+    <a href='#/contact'>Contact</a>
+    <div ng-switch='subview'>
+        <div ng-switch-when='product-detail'>
+            <div ng-controller='ProductDetailCtrl'>
+                <h1>Product detail</h1>
+                <p>{{product.id}}</p>
+                <p>{{product.title}}</p>
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+        <div ng-switch-when='home' ng-controller='HomeCtrl'>
+            <h1>Home</h1>
+        </div>
+        <div ng-switch-when='category'>
+            <div ng-controller='CategoryCtrl'>
+                <div ng-switch='subview'>
+                    <div ng-switch-when='list'>
+                        <h1>Category</h1>
+                        <a href='#/category/list/laptop'>Laptop</a>
+                        <a href='#/category/list/notebook'>Notebook</a>
+                        <a href='#/category/list/smartphone'>Smartphone</a>
+
+                        <div ng-switch='subview' ng-controller='CategoryListCtrl'>
+                            <div ng-switch-when='laptop'>
+                                <h3>Laptop</h3>
+                                <a href="#/product-detail/1">Satelite</a>
+                                <a href="#/product-detail/2">Vaio</a>
+                                <a href="#/product-detail/3">Macbook</a>
+                            </div>
+                            <div ng-switch-when='notebook'>
+                                <h3>Notebook</h3>
+                            </div>
+                            <div ng-switch-when='smartphone'>
+                                <h3>Smart phone</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div ng-switch-when='contact' ng-controller='ContactCtrl'>
+            <h1>Contact</h1>
+
+            <p>Contact us at abc@gmail.com</p>
+            <div ng-repeat='person in personList'>
+                <a ng-href='#/contact/{{person.id}}'>{{person.name}}</a>
+            </div>
+
+            <div ng-repeat='person in personList' ng-show='personId == person.id'>
+                <h4>{{person.name}}</h4>
+                <p>{{person.description}}</p>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
