@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <title>Angular UI router</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+
+    <div class='container'>
+        <div class='header'>
+            <nav>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">UI Router Example</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a ui-sref='home'>Home</a></li>
+                        <li><a ui-sref='download'>Download</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+
+            </nav>
+        </div>
+
+        <div ui-view></div>
+    </div>
+
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/home/home.js"></script>
+    <script type="text/javascript" src="app/download/download.js"></script>
+</body>
+</html>
