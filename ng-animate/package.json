@@ -1,0 +1,19 @@
+{
+  "name": "ng-animate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "ngAnimate",
+    "AngularJS",
+    "tutorial"
+  ],
+  "author": "Nam Tran",
+  "license": "MIT"
+}

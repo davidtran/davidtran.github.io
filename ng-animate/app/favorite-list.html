@@ -1,0 +1,8 @@
+<div class='favorite-list-container'>
+<div ng-repeat='item in listItems' class='slide-{{direction}}'>
+  {{item}}
+</div>
+<a ng-click='previous()'><<</a>
+{{currentPageNumber}} of {{totalPageNumber}}
+<a ng-click='next()'>>></a>
+</div>
