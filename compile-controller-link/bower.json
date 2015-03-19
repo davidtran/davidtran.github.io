@@ -1,0 +1,33 @@
+{
+  "name": "AngularDirectiveFunctions",
+  "version": "0.0.0",
+  "homepage": "https://github.com/davidtran/davidtran.github.io",
+  "authors": [
+    "Nam Tran <nam.trankhanh.vn@gmail.com>"
+  ],
+  "description": "Example of compile, controller and link functions in AngularJS directive",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "angularjs",
+    "directive",
+    "controller",
+    "link",
+    "compile",
+    "angularjs",
+    "example"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.15"
+  }
+}

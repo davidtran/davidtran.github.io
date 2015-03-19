@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+  <title>AngularJS directive functions - Compile, Controller, Link examples</title>
+</head>
+<body>
+
+<compile-example></compile-example>
+<parent-directive>
+  <child-directive></child-directive>
+</parent-directive>
+<link-example></link-example>
+<script type="text/javascript" src="bower_components/angularjs/angular.js"></script>
+<script type="text/javascript">
+  (function() {
+    angular
+      .module('app', [])
+      .directive('compileExample', compileExample)
+      .directive('parentDirective', parentDirective)
+      .directive('childDirective', childDirective);
+    function compileExample() {
+      return {
+        restrict: 'E',
+        scope: true,
+        compile: function(tElement, tAttrs) {
+          angular.element(tElement).append("My name is {{name}}");
+          return function postLink(scope, element, attrs) {
+            scope.name = 'David'
+          }
+        }
+      }
+    }
+
+    function parentDirective() {
+      return {
+        restrict: 'E',
+        scope: true,
+        controller: function($scope) {
+          $scope.name = 'Ronaldo';
+          $scope.say = function() {
+            alert('Hello ' + $scope.name);
+          }
+        }
+      }
+    }
+
+    function childDirective() {
+      return {
+        restrict: 'E',
+        require: '^parentDirective',
+        link: function(scope) {
+          scope.name = 'Elisa';
+          scope.say();
+        }
+      }
+    }
+
+  })();
+</script>
+</body>
+</html>
