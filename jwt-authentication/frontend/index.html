@@ -1,0 +1,37 @@
+<html ng-app="app">
+  <head>
+    <title>JWT Authentication</title>
+    <link rel="stylesheet" href="/public/components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>JWT Authentication</h1>
+          <div ng-controller="appCtrl as vm">
+            <div ng-show="false == vm.isAuthenticated">
+              <form class="form" ng-submit="vm.submit()">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" name="username" ng-model="vm.username" />
+                </div>
+                <div class="form-group">
+                  <label>password</label>
+                  <input type="password" class="form-control" name="password" ng-model="vm.password" />
+                </div>
+                <input type="submit" class="btn btn-primary" value="Login"/>
+              </form>
+            </div>
+            <a href="#" ng-click="vm.fetch()">Fetch resources</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/public/components/angular/angular.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/appCtrl.controller.js"></script>
+    <script src="/app/tokenInjector.factory.js"></script>
+  </body>
+</html>
