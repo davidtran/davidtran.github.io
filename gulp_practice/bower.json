@@ -1,0 +1,23 @@
+{
+  "name": "gulp_practice",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Nam Tran <nam.trankhanh.vn@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8"
+  }
+}
