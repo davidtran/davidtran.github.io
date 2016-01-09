@@ -1,0 +1,30 @@
+{
+  "name": "Angular Backendless development",
+  "homepage": "https://github.com/davidtran/davidtran.github.io",
+  "authors": [
+    "Nam Tran <nam.trankhanh.vn@gmail.com>"
+  ],
+  "description": "How to develop a backend less AngularJS app ?",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "backend",
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "faker": "Faker#~3.0.1",
+    "angular-mocks": "~1.4.8",
+    "ngstorage": "~0.3.10"
+  }
+}
