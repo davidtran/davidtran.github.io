@@ -7,8 +7,8 @@ import {Events} from '../interfaces/Events.ts';
 	selector: 'volume',
 	template: `
 		<a id="btnToggleVolume" href='#' (click)='toggleMute()'>
-			<img src='/images/sound.png' [class.hide]='isMute'/>
-			<img src='/images/mute.png' [class.hide]='!isMute'/>
+			<img src='images/sound.png' [class.hide]='isMute'/>
+			<img src='images/mute.png' [class.hide]='!isMute'/>
 		</a>
 	`,
 	styles: [`

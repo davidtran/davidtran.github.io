@@ -50,7 +50,7 @@ import {NgIf} from 'angular2/common';
 				height: 30px;
 		}
 `
-	]
+	],
 	directives: [NgIf]
 })
 export class ControlsCmp {

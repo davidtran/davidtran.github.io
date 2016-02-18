@@ -28,7 +28,7 @@ import {NgFormControl, Control} from 'angular2/common';
 	}
 
 	span.icon-search{
-		background-image: url(/images/icon-search.png);
+		background-image: url(images/icon-search.png);
 		background-size: 17px;
 		position: absolute;
 		width: 17px;

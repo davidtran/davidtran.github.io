@@ -23,7 +23,7 @@ import {Song} from '../interfaces/Song.ts';
 export class SongImageCmp {
 	@Input() song: any;
 
-	private DefaultImageUrl = "/images/artist_placeholder.png";
+	private DefaultImageUrl = "images/artist_placeholder.png";
 
 	getImageUrl() {
 		if (this.song && this.song.imageUrl) {

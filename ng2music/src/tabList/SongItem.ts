@@ -95,34 +95,34 @@ import {SoundManager} from "../services/SoundManager.ts";
 		}
 
 		.icon-play {
-				background-image: url(/images/icon-play.png);
+				background-image: url(images/icon-play.png);
 				background-size: 20px;
 				width: 20px;
 				height: 20px;
 		}
 
 		.icon-share {
-				background-image: url(/images/icon-share.png);
+				background-image: url(images/icon-share.png);
 				background-size: 20px;
 				width: 20px;
 				height: 20px;
 		}
 
 		.icon-sound {
-				background-image: url(/images/sound_click.png);
+				background-image: url(images/sound_click.png);
 				background-size: 20px;
 				width: 20px;
 				height: 15px;
 		}
 
 		.icon-remove {
-				background-image: url(/images/remove.png);
+				background-image: url(images/remove.png);
 				background-size: 20px;
 				width: 20px;
 				height: 20px;
 		}
 		.icon-add {
-			background-image: url(/images/icon-add.png);
+			background-image: url(images/icon-add.png);
 			background-size: 20px;
 			width: 20px;
 			height: 20px;
@@ -169,7 +169,7 @@ export class SongItemCmp
 		if (song.imageUrl != null) {
 			return song.imageUrl;
 		}
-		return '/images/artist_placeholder.png';
+		return 'images/artist_placeholder.png';
 	}
 
 }

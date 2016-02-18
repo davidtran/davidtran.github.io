@@ -14,7 +14,7 @@ import {SongItemCmp} from '../SongItem.ts';
 		</div>
 
 		<div id='search-help' *ngIf='result == null || result.length == 0'>
-			<img src='/images/arrow.jpg'/>
+			<img src='images/arrow.jpg'/>
 			<p>Search your music on SoundCloud</p>
 		</div>
 
