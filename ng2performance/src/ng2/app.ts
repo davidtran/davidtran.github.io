@@ -9,8 +9,8 @@ enableProdMode();
 	selector: 'app',
 	template: `
 		<table>
-			<tr *ngFor="#row of grid">
-				<td *ngFor="#name of row">
+			<tr *ngFor="#row of grid;trackBy:track">
+				<td *ngFor="#name of row;trackBy:track">
 					{{name}}
 				</td>
 			</tr>
@@ -21,7 +21,7 @@ enableProdMode();
 export class AppCmp {
 	private grid: any;
 	private gridWidth = 30;
-	private gridHeight = 500;
+	private gridHeight = 700;
 	private interval = 50;
 	private changePerInterval = 10000;
 	private names = ['Joe', 'Michael', 'David', 'Jones', 'Phil', 'Johnson', 'Janes', 'Anna', 'Hugo', 'Lina', 'Scotte', 'Nam', 'Tran',
@@ -57,6 +57,10 @@ export class AppCmp {
 		setInterval(() => {
 			this.grid = this.initializeGrid();
 		}, this.interval);
+	}
+
+	track(index) {
+		return index;
 	}
 }
 
