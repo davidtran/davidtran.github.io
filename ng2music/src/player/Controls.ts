@@ -9,14 +9,14 @@ import {NgIf} from 'angular2/common';
 	selector: 'controls',
 	template:`
 		<a href='#' id="btnPrevious" title="" (click)='previous()'>
-				<img src='/images/prev.png'/>
+				<img src='images/prev.png'/>
 		</a>
 		<a href='#' id="btnPlayPause" (click)='togglePlayPause()'>
-				<img src='/images/play.png' [class.hide]='isPlaying'/>
-				<img src='/images/pause.png' [class.hide]='!isPlaying'/>
+				<img src='images/play.png' [class.hide]='isPlaying'/>
+				<img src='images/pause.png' [class.hide]='!isPlaying'/>
 		</a>
 		<a href='#' id="btnNextSong" (click)='next()'>
-				<img src='/images/next.png'/>
+				<img src='images/next.png'/>
 		</a>
 	`,
 	styles: [
